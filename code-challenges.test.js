@@ -14,18 +14,43 @@
 // --------------------1) Create a function that takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.
 
 // a) Create a test with expect statements using the variables provided.
+describe("l33tWord", () => {
+    const secretCodeWord1 = "Lackadaisical"
+    // Expected output: "L4ck4d41s1c4l"
+    const secretCodeWord2 = "Gobbledygook"
+    // Expected output: "G0bbl3dyg00k"
+    const secretCodeWord3 = "Eccentric"
+    // Expected output: "3cc3ntr1c"
+    it("takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.", () => {
+        expect(l33tWord(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
+        expect(l33tWord(secretCodeWord2)).toEqual("G0bbl3dyg00k")
+        expect(l33tWord(secretCodeWord3)).toEqual("3cc3ntr1c")
+    })
+})
 
-const secretCodeWord1 = "Lackadaisical"
-// Expected output: "L4ck4d41s1c4l"
-const secretCodeWord2 = "Gobbledygook"
-// Expected output: "G0bbl3dyg00k"
-const secretCodeWord3 = "Eccentric"
-// Expected output: "3cc3ntr1c"
-
+                // FAIL  ./code-challenges.test.js
+                // l33tWord
+                //   ✕ takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0. (2 ms)
+                //   ReferenceError: l33tWord is not defined
 
 // b) Create the function that makes the test pass.
 
+//Input is a string
+    //Create a function called l33tWord that takes in a string as an argument for the parameter
+    //using regex
+        //if the letter at the current index is A replace it with '4'
+        //if the letter at the current index is E replace it with '3'
+        //if the letter at the current index is I replace it with '1'
+        //if the letter at the current index is O replace it with '0'
+    //else return the value at that index
+    //join the values in the array into one string and capitalize the first letter
 
+    function l33tWord(string){
+        return string.replace(/a/gi, '4').replace(/e/gi, '3').replace(/i/gi, '1').replace(/o/gi, '0')}
+
+                //   PASS  ./code-challenges.test.js
+                //   l33tWord
+                //     ✓ takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0. (2 ms)
 // --------------------2) Create a function that takes in an array of words and a single letter and returns all the words that contain that particular letter.
 
 // a) Create a test with expects statement using the variable provided.
@@ -39,6 +64,9 @@ const letterE = "e"
 
 
 // b) Create the function that makes the test pass.
+
+//Create a function called specLetter that takes in two parameters: an array of words and a letter
+//Map through the array and return the word in the given array that contains the letter passed as an argument.
 
 
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
