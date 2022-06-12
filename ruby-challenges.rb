@@ -43,3 +43,39 @@ p sum_it nums_array2
 # Expected output example: my_bike.pedal_faster(18) => 28
 # Expected output example: my_bike.brake(5) => 23
 # Expected output example: my_bike.brake(25) => 0
+
+class Bike
+    attr_accessor :model, :wheels, :current_speed
+    def initialize(model, wheels, current_speed)
+        @model = model
+        @wheels = 2
+        @current_speed = 0
+    end
+    def bike_info
+        "The #{@model} bike has #{@wheels} wheels and is going #{@current_speed} mph."
+    end
+    def pedal_faster(amount)
+        @current_speed = @current_speed + amount
+    end
+    def brake(num)
+        if @current_speed - num >= 0
+        @current_speed = @current_speed - num
+        else
+            @current_speed = 0
+        
+
+        end
+    end
+end
+
+my_bike =  Bike.new("Trek", 2, 0)
+p my_bike.bike_info
+my_bike.pedal_faster(10)
+p my_bike.bike_info
+my_bike.pedal_faster(18)
+p my_bike.bike_info
+my_bike.brake(5)
+p my_bike.bike_info
+my_bike.brake(25)
+p my_bike.bike_info
+
