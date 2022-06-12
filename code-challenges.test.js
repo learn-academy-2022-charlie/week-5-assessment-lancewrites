@@ -37,12 +37,12 @@ describe("l33tWord", () => {
 
 //Input is a string
     //Create a function called l33tWord that takes in a string as an argument for the parameter
-    //using regex
+    //using regex return
         //for every instance of A replace it with '4'
         //for every instance of E replace it with '3'
         //for every instance of I replace it with '1'
         //for every instance of O replace it with '0'
-    //else return the value at that index
+    
     
 
     function l33tWord(string){
