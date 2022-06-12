@@ -38,12 +38,12 @@ describe("l33tWord", () => {
 //Input is a string
     //Create a function called l33tWord that takes in a string as an argument for the parameter
     //using regex
-        //if the letter at the current index is A replace it with '4'
-        //if the letter at the current index is E replace it with '3'
-        //if the letter at the current index is I replace it with '1'
-        //if the letter at the current index is O replace it with '0'
+        //for every instance of A replace it with '4'
+        //for every instance of E replace it with '3'
+        //for every instance of I replace it with '1'
+        //for every instance of O replace it with '0'
     //else return the value at that index
-    //join the values in the array into one string and capitalize the first letter
+    
 
     function l33tWord(string){
         return string.replace(/a/gi, '4').replace(/e/gi, '3').replace(/i/gi, '1').replace(/o/gi, '0')}
